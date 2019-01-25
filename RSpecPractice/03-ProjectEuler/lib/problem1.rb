@@ -23,9 +23,30 @@ def even_fibonacci_sum(limit)
   end
      sum
 end
-  
+
+def largest_prime(number)
+  i = 2
+  largest_divisor = 0
+    while i < number
+      if number % i == 0
+        largest_divisor = i
+        number = number / i
+        i = 2
+      else
+        i += 1
+      end
+    end
+  number
+  end
 
 end
 
-test = Problem1.new 
-test.even_fibonacci_sum(1000000)
+ test = Problem1.new
+
+ puts test.largest_prime(477)
+
+
+
+
+
+
